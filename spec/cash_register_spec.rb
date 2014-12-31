@@ -1,13 +1,11 @@
 require 'cash_register'
 
 describe CashRegister do
-  describe "#total" do
-    it 'starts at 0' do
-      cash_register = CashRegister.new
+  describe "initialization" do
+    it 'takes an initial amount' do
+      cash_register = CashRegister.new(74.32)
 
-      total = cash_register.total
-
-      expect(total).to eq(0)
+      expect(cash_register.total).to eq(74.32)
     end
   end
 
